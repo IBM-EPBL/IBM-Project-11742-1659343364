@@ -339,7 +339,7 @@ def forget_password():
 					_email = None
 				else:
 					session['username'] = User.query.filter_by(email=_email).first().username
-					msg = Message('Hello, your personal expense manager app!', sender = 'rupavjain1@gmail.com', recipients = [_email])
+					msg = Message('Hello, your personal expense manager app!', sender = 'petamailsender@gmail.com', recipients = [_email])
 					#time = datetime
 					secret_key = random.randint(1000,10000)
 					session['otp'] = secret_key
